@@ -1,0 +1,59 @@
+<project name="tapstack" default="build" basedir="." xmlns:ivy="antlib:fr.jayasoft.ivy.ant">
+	<tstamp>
+		<format property="version.time" pattern="yyyyMMdd.HHmmss" />
+	</tstamp>
+	<property name="src.dir" value="${basedir}/src" />
+	<property name="lib.dir" value="${basedir}/lib" />
+	<property name="ivy.jar" value="ivy-1.4.1.jar" />
+	<property name="build.dir" value="${basedir}/build" />
+	<property name="classes.dir" value="${build.dir}/classes" />
+	<property name="javadoc.dir" value="${build.dir}/javadoc" />
+
+	<echo message="************* ${ant.project.name} - ${ant.file}  *************" />
+	<echo message="** basedir    = ${basedir}" />
+	<echo message="** build.dir  = ${build.dir}" />
+
+	<target name="init">
+		<mkdir dir="${lib.dir}" />
+		<get src="http://ivy.mattayres.com/repos/${ivy.jar}" dest="${lib.dir}/${ivy.jar}" usetimestamp="true" />
+		<taskdef resource="fr/jayasoft/ivy/ant/antlib.xml"
+		         uri="antlib:fr.jayasoft.ivy.ant"
+		         classpath="${lib.dir}/${ivy.jar}" />
+		<ivy:configure file="${basedir}/ivyconf.xml" />
+		<ivy:resolve />
+		<ivy:cachepath pathid="ivy.cp" />
+	</target>
+
+	<target name="clean">
+		<delete dir="${build.dir}" />
+	</target>
+
+	<target name="prepare" depends="init">
+		<mkdir dir="${classes.dir}" />
+	</target>
+
+	<target name="compile" depends="prepare">
+		<javac srcdir="${src.dir}" destdir="${classes.dir}">
+			<classpath refid="ivy.cp" />
+			<include name="**/*.java" />
+		</javac>
+	</target>
+
+	<target name="build" depends="compile">
+		<jar jarfile="${build.dir}/${ant.project.name}.jar">
+			<fileset dir="${classes.dir}" />
+		</jar>
+	</target>
+
+	<target name="publish" depends="build">
+		<ivy:deliver pubrevision="${version.time}" status="integration" deliverpattern="${build.dir}/ivy.xml" />
+		<ivy:publish artifactspattern="${build.dir}/[artifact].[ext]" pubrevision="${version.time}" resolver="local" />
+	</target>
+
+	<target name="javadoc" depends="init">
+		<mkdir dir="${javadoc.dir}" />
+		<javadoc destdir="${javadoc.dir}">
+			<packageset dir="src" />
+		</javadoc>
+	</target>
+</project>

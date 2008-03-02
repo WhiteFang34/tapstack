@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivyconf>
+	<property override="false" name="version.branch" value="trunk" />
+	<property override="false" name="cache.dir" value="${user.home}/.ivy/cache" />
+	<property override="false" name="repository.dir" value="${user.home}/.ivy/repository" />
+
+	<conf defaultResolver="share" defaultBranch="${version.branch}" defaultCache="${cache.dir}" validate="false" />
+
+	<resolvers>
+		<filesystem name="local" checkmodified="true" changingPattern=".*" latest="latest-time">
+			<artifact pattern="${repository.dir}/[branch]/[module]/[artifact]-[revision].[ext]" />
+			<ivy pattern="${repository.dir}/[branch]/[module]/[module]-[revision].xml" />
+		</filesystem>
+		<url name="share">
+			<artifact pattern="http://ivy.mattayres.com/repos/[module]-[revision].[ext]" />
+		</url> 
+	</resolvers>
+</ivyconf>
