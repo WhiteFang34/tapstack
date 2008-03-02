@@ -58,7 +58,9 @@
 			<path refid="ivy.cp" />
 		</path>
 
-		<java fork="true" classpathref="deploy.cp" classname="com.mattayres.tapstack.TapStackMain" />
+		<java fork="true" classpathref="deploy.cp" classname="com.mattayres.tapstack.TapStackMain">
+			<sysproperty key="jetty.port" value="${jetty.port}" />
+		</java>
 	</target>
 
 	<target name="war" depends="build">

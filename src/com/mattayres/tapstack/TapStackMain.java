@@ -17,7 +17,14 @@ public class TapStackMain {
 	public static void main(String[] args) throws Exception {
 		configureLogging();
 
-		Server webServer = new Server(8080);
+		int port;
+		try {
+			port = Integer.parseInt(System.getProperty("jetty.port"));
+		} catch (RuntimeException e) {
+			port = 8080;
+		}
+
+		Server webServer = new Server(port);
 		webServer.setHandler(createContext());
 		webServer.start();
 	}
