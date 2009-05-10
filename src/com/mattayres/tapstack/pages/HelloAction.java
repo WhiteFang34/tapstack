@@ -2,7 +2,8 @@ package com.mattayres.tapstack.pages;
 
 import java.util.List;
 
-import org.apache.tapestry.ioc.annotations.Inject;
+import org.apache.tapestry5.hibernate.annotations.CommitAfter;
+import org.apache.tapestry5.ioc.annotations.Inject;
 import org.hibernate.Session;
 
 import com.mattayres.tapstack.entities.Hello;
@@ -13,6 +14,7 @@ public class HelloAction {
 
 	private Hello current;
 
+	@CommitAfter
 	public void onAction() {
 		Hello hello = new Hello();
 		hello.setMessage("Hello World");

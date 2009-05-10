@@ -10,12 +10,12 @@
 	</context-param>
 
 	<filter>
-		<filter-name>tapestry</filter-name>
-		<filter-class>org.apache.tapestry.TapestryFilter</filter-class>
+		<filter-name>tapStack</filter-name>
+		<filter-class>org.apache.tapestry5.TapestryFilter</filter-class>
 	</filter>
 
 	<filter-mapping>
-		<filter-name>tapestry</filter-name>
+		<filter-name>tapStack</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 </web-app>

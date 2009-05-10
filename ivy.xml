@@ -1,34 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	version="1.4"
-	xsi:noNamespaceSchemaLocation="http://www.jayasoft.org/misc/ivy/ivy.xsd">
+<ivy-module version="1.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="http://www.jayasoft.org/misc/ivy/ivy.xsd">
 	<info organisation="mattayres" module="tapstack" />
 	<configurations></configurations>
 	<publications></publications>
 	<dependencies>
+		<dependency org="antlr" name="antlr" rev="3.1.3" />
 		<dependency org="apache" name="commons-codec" rev="1.3" />
 		<dependency org="apache" name="commons-collections" rev="3.2" />
+		<dependency org="apache" name="commons-lang" rev="2.3" />
 		<dependency org="apache" name="commons-logging" rev="1.1.1" />
+		<dependency org="apache" name="commons-fileupload" rev="1.2.1" />
 		<dependency org="apache" name="log4j" rev="1.2.15" />
-		<dependency org="apache" name="tapestry-core" rev="5.0.11" />
-		<dependency org="apache" name="tapestry-hibernate" rev="5.0.11" />
-		<dependency org="apache" name="tapestry-ioc" rev="5.0.11" />
+		<dependency org="apache" name="tapestry5-annotations" rev="5.1.0.5" />
+		<dependency org="apache" name="tapestry-core" rev="5.1.0.5" />
+		<dependency org="apache" name="tapestry-hibernate" rev="5.1.0.5" />
+		<dependency org="apache" name="tapestry-hibernate-core" rev="5.1.0.5" />
+		<dependency org="apache" name="tapestry-ioc" rev="5.1.0.5" />
+		<dependency org="apache" name="tapestry-upload" rev="5.1.0.5" />
 		<dependency org="c3p0" name="c3p0" rev="0.9.1.2" />
-		<dependency org="cglib" name="cglib" rev="2.1.3" />
+		<dependency org="codehaus" name="stax2-api" rev="3.0.1" />
+		<dependency org="codehaus" name="woodstox-core-asl" rev="4.0.3" />
 		<dependency org="dom4j" name="dom4j" rev="1.6.1" />
-		<dependency org="jetty" name="jetty" rev="6.1.7" />
-		<dependency org="jetty" name="jetty-util" rev="6.1.7" />
-		<dependency org="jboss" name="hibernate-annotations" rev="3.3.0" />
-		<dependency org="jboss" name="hibernate-commons-annotations" rev="3.3.0" />
-		<dependency org="jboss" name="hibernate-core" rev="3.2.6" />
-		<dependency org="jboss" name="javassist" rev="3.7" />
-		<dependency org="objectweb" name="asm" rev="1.5.3" />
-		<dependency org="mysql" name="mysql-connector-java" rev="5.1.6" />
-		<dependency org="slf4j" name="slf4j-api" rev="1.4.3" />
-		<dependency org="slf4j" name="slf4j-log4j12" rev="1.4.3" />
+		<dependency org="jetty" name="jetty" rev="6.1.17" />
+		<dependency org="jetty" name="jetty-util" rev="6.1.17" />
+		<dependency org="jboss" name="hibernate-annotations" rev="3.4.0" />
+		<dependency org="jboss" name="hibernate-commons-annotations" rev="3.1.0" />
+		<dependency org="jboss" name="hibernate-core" rev="3.3.1" />
+		<dependency org="jboss" name="javassist" rev="3.9.0" />
+		<dependency org="mysql" name="mysql-connector-java" rev="5.1.7" />
+		<dependency org="slf4j" name="slf4j-api" rev="1.5.6" />
+		<dependency org="slf4j" name="slf4j-log4j12" rev="1.5.6" />
 		<dependency org="sun" name="ejb-persistence" rev="3.0" />
 		<dependency org="sun" name="jta" rev="1.1" />
-		<dependency org="sun" name="mail" rev="1.4" />
-		<dependency org="sun" name="servlet-api" rev="2.4" />
+		<dependency org="sun" name="mail" rev="1.4.2" />
+		<dependency org="sun" name="servlet-api" rev="2.5" />
 	</dependencies>
 </ivy-module>
