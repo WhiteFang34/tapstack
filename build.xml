@@ -4,7 +4,6 @@
 	</tstamp>
 
 	<property name="src.dir" value="${basedir}/src" />
-	<property name="res.dir" value="${basedir}/res" />
 	<property name="lib.dir" value="${basedir}/lib" />
 	<property name="ivy.jar" value="ivy-1.4.1.jar" />
 	<property name="build.dir" value="${basedir}/build" />
@@ -42,7 +41,7 @@
 			<include name="**/*.java" />
 		</javac>
 		<copy todir="${classes.dir}">
-			<fileset dir="${res.dir}" />
+			<fileset dir="${src.dir}" excludes="*.java" />
 		</copy>
 	</target>
 
