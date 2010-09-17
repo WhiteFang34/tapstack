@@ -1,4 +1,4 @@
-package com.mattayres.tapstack.pages;
+package com.arfsoft.tapstack.pages;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.apache.tapestry5.hibernate.annotations.CommitAfter;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.hibernate.Session;
 
-import com.mattayres.tapstack.entities.Hello;
+import com.arfsoft.tapstack.entities.Hello;
 
 public class HelloAction {
 	@Inject

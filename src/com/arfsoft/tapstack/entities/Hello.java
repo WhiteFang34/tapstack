@@ -1,4 +1,4 @@
-package com.mattayres.tapstack.entities;
+package com.arfsoft.tapstack.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
