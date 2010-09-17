@@ -21,7 +21,7 @@ public class HelloAction {
 		session.save(hello);
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public List getList() {
 		return session.createCriteria(Hello.class).list();
 	}
