@@ -12,7 +12,7 @@
 			<ivy pattern="${repository.dir}/[branch]/[module]/[module]-[revision].xml" />
 		</filesystem>
 		<url name="share">
-			<artifact pattern="http://ivy.mattayres.com/repos/[module]-[revision].[ext]" />
+			<artifact pattern="http://ivy.arfsoft.com/repos/[module]-[revision].[ext]" />
 		</url> 
 	</resolvers>
 </ivyconf>

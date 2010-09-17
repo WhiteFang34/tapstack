@@ -6,7 +6,7 @@
 
 	<context-param>
 		<param-name>tapestry.app-package</param-name>
-		<param-value>com.mattayres.tapstack</param-value>
+		<param-value>com.arfsoft.tapstack</param-value>
 	</context-param>
 
 	<filter>

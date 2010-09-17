@@ -27,7 +27,7 @@
 
 	<target name="ivy.get" unless="ivy.exists">
 		<mkdir dir="${lib.dir}" />
-		<get src="http://ivy.mattayres.com/repos/${ivy.jar}" dest="${lib.dir}/${ivy.jar}" usetimestamp="true" />
+		<get src="http://ivy.arfsoft.com/repos/${ivy.jar}" dest="${lib.dir}/${ivy.jar}" usetimestamp="true" />
 	</target>
 
 	<target name="clean">
@@ -57,7 +57,7 @@
 			<path refid="ivy.cp" />
 		</path>
 
-		<java fork="true" classpathref="deploy.cp" classname="com.mattayres.tapstack.TapStackMain">
+		<java fork="true" classpathref="deploy.cp" classname="com.arfsoft.tapstack.TapStackMain">
 			<sysproperty key="jetty.port" value="${jetty.port}" />
 		</java>
 	</target>

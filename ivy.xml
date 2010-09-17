@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivy-module version="1.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:noNamespaceSchemaLocation="http://www.jayasoft.org/misc/ivy/ivy.xsd">
-	<info organisation="mattayres" module="tapstack" />
+	<info organisation="arfsoft" module="tapstack" />
 	<configurations></configurations>
 	<publications></publications>
 	<dependencies>
