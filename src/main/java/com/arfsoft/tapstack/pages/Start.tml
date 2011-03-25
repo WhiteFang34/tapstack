@@ -4,5 +4,7 @@
 	</head>
 	<body>
 		TapStack
+		<br />
+		<a t:type="pagelink" page="helloaction">HelloAction</a>
 	</body>
 </html>

@@ -6,9 +6,9 @@ import org.apache.log4j.Layout;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
-import org.mortbay.jetty.Server;
-import org.mortbay.jetty.servlet.Context;
-import org.mortbay.jetty.webapp.WebAppContext;
+import org.eclipse.jetty.server.Handler;
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.webapp.WebAppContext;
 
 /**
  * @author Matt Ayres
@@ -29,10 +29,10 @@ public class TapStackMain {
 		webServer.start();
 	}
 
-	private static Context createContext() {
+	private static Handler createContext() {
 		WebAppContext context = new WebAppContext();
 		context.setContextPath("/");
-		context.setResourceBase(".");
+		context.setResourceBase("src/main/webapp");
 		return context;
 	}
 
